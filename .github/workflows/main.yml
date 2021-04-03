@@ -21,7 +21,7 @@ jobs:
     - name: '安装 requirements'
       run: pip install -r ./requirements.txt
       
-    - name: '运行【签到】'
+    - name: '运行【什么值得买推送】'
       run: python3 index.py
       env:
           IS_GITHUB : true
