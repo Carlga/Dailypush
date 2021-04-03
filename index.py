@@ -35,7 +35,9 @@ def msg_qywxapp(qywx_corpid,qywx_corpsecret,qywx_agentid,content):
         'agentid':qywx_agentid,
         'text':{
             'content': content
-        }
+        },
+        'enable_duplicate_check':1,
+        'duplicate_check_interval':60*60*60
     }
     r = requests.post(f'https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token={qywx_token}',json=data)
     # print(r.text)
