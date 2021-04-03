@@ -55,4 +55,5 @@ def main(config_json):
         msg_qywxapp(qywx_corpid,qywx_corpsecret,qywx_agentid,content)
 
 if __name__ == '__main__':
-    main(config_json)
+    data = env2config()
+    main(data)
