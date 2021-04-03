@@ -1,4 +1,4 @@
-import requests,re
+import requests,re,OS
 
 qywx_token = ''
 
@@ -55,5 +55,8 @@ def main(config_json):
         msg_qywxapp(qywx_corpid,qywx_corpsecret,qywx_agentid,content)
 
 if __name__ == '__main__':
-    data = env2config()
-    main(data)
+    data = json.loads(os.getenv("CONFIG_JSON", {}).strip()) if os.getenv("CONFIG_JSON") else {}
+    if data:
+        main(data)
+    else:
+        print('参数为空')
