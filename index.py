@@ -1,4 +1,4 @@
-import requests,re,OS
+import requests,re,os
 
 qywx_token = ''
 
