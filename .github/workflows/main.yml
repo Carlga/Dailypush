@@ -3,7 +3,7 @@ name: 什么值得买推送
 on:
   workflow_dispatch: # 手动触发
   schedule: # 计划任务触发
-    - cron: '0 8/2 * * *'
+    - cron: '*/10 8-22 * * *'
   watch:
     types: [ started ]
 jobs:
