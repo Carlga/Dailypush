@@ -1,7 +1,7 @@
 import requests,re,os,json
 
 qywx_token = ''
-
+# "UID_LIST":["9687682701","5160345630","8982803543","2031093162","7059411206"]
 def smzdm(uid):
 
     re1 = re.compile(r'<a target=.*?href="(.*?)">\s+(.*?)\s+</a>')
