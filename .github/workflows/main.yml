@@ -24,5 +24,4 @@ jobs:
     - name: '运行【什么值得买推送】'
       run: python3 index.py
       env:
-          IS_GITHUB : true
           CONFIG_JSON: ${{ secrets.CONFIG_JSON }}
