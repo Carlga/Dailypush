@@ -1,4 +1,4 @@
-import requests,re,os
+import requests,re,os,json
 
 qywx_token = ''
 
@@ -28,7 +28,7 @@ def msg_qywxapp(qywx_corpid,qywx_corpsecret,qywx_agentid,content):
     if not qywx_token:
         res = requests.get(f'https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={qywx_corpid}&corpsecret={qywx_corpsecret}')
         qywx_token = res.json().get('access_token','')
-    print(qywx_token)
+    #print(qywx_token)
     data = {
         'touser':'@all',
         'msgtype':'text',
